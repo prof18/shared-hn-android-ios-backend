@@ -5,8 +5,8 @@
       <configuration version="3" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false" isTestModule="true" externalProjectId="hn-dto">
         <dependsOnModuleNames>hn-dto:commonTest</dependsOnModuleNames>
         <sourceSets>
-          <sourceSet>hn-dto.commonTest</sourceSet>
           <sourceSet>hn-dto.commonMain</sourceSet>
+          <sourceSet>hn-dto.commonTest</sourceSet>
           <sourceSet>hn-dto.jvmMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
@@ -18,7 +18,7 @@
         </compilerSettings>
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/../../build/classes/kotlin/jvm/test" />
-          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.4.0/e3765b66f0610afc92053ff1a93a87a544fca2b/kotlin-stdlib-jdk8-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.4.0/9cc187c3dfaf6e4001bdf962e3cdadff7690261b/kotlin-stdlib-jdk7-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.0/63e75298e93d4ae0b299bb869cf0c627196f8843/kotlin-stdlib-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.0/1c752cce0ead8d504ccc88a4fed6471fd83ab0dd/kotlin-stdlib-common-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-common/1.4.0/2e8e012c03992fcf1c1b3bf356e6e31ecceb1888/kotlin-test-common-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-annotations-common/1.4.0/a0ad1ebaffce72b7fd0b04a8845079537cfecb3/kotlin-test-annotations-common-1.4.0.jar" />
+          <option name="classpath" value="$MODULE_DIR$/../../build/classes/kotlin/jvm/main:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.4.0/e3765b66f0610afc92053ff1a93a87a544fca2b/kotlin-stdlib-jdk8-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.4.0/9cc187c3dfaf6e4001bdf962e3cdadff7690261b/kotlin-stdlib-jdk7-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.0/63e75298e93d4ae0b299bb869cf0c627196f8843/kotlin-stdlib-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.0/1c752cce0ead8d504ccc88a4fed6471fd83ab0dd/kotlin-stdlib-common-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-common/1.4.0/2e8e012c03992fcf1c1b3bf356e6e31ecceb1888/kotlin-test-common-1.4.0.jar:/Users/marco/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-annotations-common/1.4.0/a0ad1ebaffce72b7fd0b04a8845079537cfecb3/kotlin-test-annotations-common-1.4.0.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="hn-dto" />
@@ -26,7 +26,7 @@
           <option name="friendPaths">
             <array>
               <option value="$MODULE_DIR$/../../build/classes/kotlin/jvm/main" />
-              <option value="$MODULE_DIR$/../../build/libs/hn-dto-jvm-1.0-SNAPSHOT.jar" />
+              <option value="$MODULE_DIR$/../../build/libs/hn-dto-jvm-1.0.0-SNAPSHOT.jar" />
             </array>
           </option>
           <option name="languageVersion" value="1.4" />

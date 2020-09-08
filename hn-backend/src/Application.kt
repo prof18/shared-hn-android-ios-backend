@@ -6,6 +6,7 @@ import io.ktor.request.*
 import io.ktor.routing.*
 import io.ktor.http.*
 import com.fasterxml.jackson.databind.*
+import com.prof18.hn.dto.NewsDTO
 import io.ktor.jackson.*
 import io.ktor.features.*
 
@@ -20,13 +21,15 @@ fun Application.module(testing: Boolean = false) {
         }
     }
 
+    val repository = NewsRepositoryImpl()
+
     routing {
         get("/") {
             call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
         }
 
-        get("/json/jackson") {
-            call.respond(mapOf("hello" to "world"))
+        get("/hn/topStories") {
+            call.respond(repository.getTopStories())
         }
     }
 }

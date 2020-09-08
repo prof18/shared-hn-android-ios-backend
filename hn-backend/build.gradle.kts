@@ -29,6 +29,7 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-jackson:$ktor_version")
+    implementation("com.prof18.hn.dto:hn-dto-jvm:1.0.0-SNAPSHOT")
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
 }
 

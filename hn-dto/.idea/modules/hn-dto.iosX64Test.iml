@@ -8,11 +8,11 @@
           <dependsOn>hn-dto:iosTest</dependsOn>
         </dependsOnModuleNames>
         <sourceSets>
-          <sourceSet>hn-dto.commonTest</sourceSet>
           <sourceSet>hn-dto.iosMain</sourceSet>
-          <sourceSet>hn-dto.commonMain</sourceSet>
           <sourceSet>hn-dto.iosX64Main</sourceSet>
           <sourceSet>hn-dto.iosTest</sourceSet>
+          <sourceSet>hn-dto.commonMain</sourceSet>
+          <sourceSet>hn-dto.commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <externalSystemTestTasks>

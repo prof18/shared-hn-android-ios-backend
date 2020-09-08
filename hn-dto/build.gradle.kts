@@ -17,7 +17,7 @@ repositories {
 
 val libName = "HN-DTO"
 val libGroup = "com.prof18.hn.dto"
-val libVersionName = "1.0-SNAPSHOT"
+val libVersionName = "1.0.0-SNAPSHOT"
 val libVersionCode = 10000
 
 group = libGroup
