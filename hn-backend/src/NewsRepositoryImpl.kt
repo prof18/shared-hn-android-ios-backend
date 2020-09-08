@@ -7,7 +7,7 @@ class NewsRepositoryImpl : NewsRepository {
 
     override fun getTopStories(): ListResponseDTO<NewsDTO> {
         return ListResponseDTO(
-                items = news
+                items = news.sortedByDescending { it.timestamp }
         )
     }
 

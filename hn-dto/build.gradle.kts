@@ -39,7 +39,7 @@ version = libVersionName
 android {
     compileSdkVersion(29)
     defaultConfig {
-        minSdkVersion(24)
+        minSdkVersion(23)
         targetSdkVersion(29)
         versionCode = libVersionCode
         versionName = libVersionName
