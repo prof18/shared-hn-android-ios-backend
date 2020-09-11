@@ -2,8 +2,8 @@ import java.util.*
 import java.text.SimpleDateFormat
 
 plugins {
-    kotlin("multiplatform") version "1.4.0"
     id("com.android.library")
+    kotlin("multiplatform") version "1.4.0"
     id("kotlin-android-extensions")
     id("maven-publish")
 }
