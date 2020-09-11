@@ -17,7 +17,7 @@ repositories {
 
 val libName = "HNFoundation"
 val libGroup = "com.prof18.hn.foundation"
-val libVersionName = "1.0.0-SNAPSHOT"
+val libVersionName = "1.0.0"
 val libVersionCode = 10000
 
 group = libGroup
@@ -35,9 +35,6 @@ version = libVersionName
 //        }
 //    }
 //}
-
-
-
 
 android {
     compileSdkVersion(29)
@@ -60,56 +57,22 @@ android {
     }
 }
 
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            // Creates a Maven publication called "release".
-//            create<MavenPublication>("release") {
-////            release(MavenPublication) {
-//                // Applies the component for the release build variant.
-//                from(components["release"])
-////                from components.release
-//
-//                // You can then customize attributes of the publication as shown below.
-//                groupId = libGroup
-//                artifactId = libName
-//                version = libVersionName
-//            }
-//            // Creates a Maven publication called “debug”.
-//            create<MavenPublication>("debug") {
-//
-////            debug(MavenPublication) {
-//                // Applies the component for the debug build variant.
-//                from(components["debug"])
-////                from components.debug
-//
-//                groupId = libGroup
-//                artifactId = libName
-//                version = libVersionName
-//            }
-//        }
-//    }
-//}
-
 kotlin {
+
+    jvm()
 
     android {
         publishAllLibraryVariants()
         publishLibraryVariantsGroupedByFlavor = true
     }
 
-    jvm()
-    android()
     ios {
         binaries.framework(libName)
     }
 
     version = libVersionName
 
-
     sourceSets {
-
-
         val commonMain by getting {
             dependencies {
                 implementation("co.touchlab:stately-common:1.1.1")
@@ -131,9 +94,6 @@ kotlin {
         val iosTest by getting
         val jvmMain by getting
         val jvmTest by getting
-
-        androidMain.dependsOn(commonMain)
-
     }
 
     tasks {
@@ -156,7 +116,7 @@ kotlin {
                 iosArm64().binaries.getFramework(libName, "Release"),
                 iosX64().binaries.getFramework(libName, "Release")
             )
-            destinationDir = buildDir.resolve("$rootDir/../../hn-dto-cocoa")
+            destinationDir = buildDir.resolve("$rootDir/../../hn-foundation-cocoa")
             group = libName
             description = "Create the release framework for iOs"
             dependsOn("linkHNFoundationReleaseFrameworkIosArm64")
@@ -177,8 +137,8 @@ kotlin {
 
             // Replace
             doLast {
-                val dir = File("$rootDir/../../hn-dto-cocoa/HNFoundation.podspec")
-                val tempFile = File("$rootDir/../../hn-dto-cocoa/HNFoundation.podspec.new")
+                val dir = File("$rootDir/../../hn-foundation-cocoa/HNFoundation.podspec")
+                val tempFile = File("$rootDir/../../hn-foundation-cocoa/HNFoundation.podspec.new")
 
                 val reader = dir.bufferedReader()
                 val writer = tempFile.bufferedWriter()
@@ -198,7 +158,7 @@ kotlin {
                 if (successful) {
 
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine(
                             "git",
                             "checkout",
@@ -208,7 +168,7 @@ kotlin {
 
                     val dateFormatter = SimpleDateFormat("dd/MM/yyyy - HH:mm", Locale.getDefault())
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine(
                             "git",
                             "commit",
@@ -219,7 +179,7 @@ kotlin {
                     }
 
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine("git", "push", "origin", "develop").standardOutput
                     }
                 }
@@ -234,8 +194,8 @@ kotlin {
 
             // Replace
             doLast {
-                val dir = File("$rootDir/../../hn-dto-cocoa/HNFoundation.podspec")
-                val tempFile = File("$rootDir/../../hn-dto-cocoa/HNFoundation.podspec.new")
+                val dir = File("$rootDir/../../hn-foundation-cocoa/HNFoundation.podspec")
+                val tempFile = File("$rootDir/../../hn-foundation-cocoa/HNFoundation.podspec.new")
 
                 val reader = dir.bufferedReader()
                 val writer = tempFile.bufferedWriter()
@@ -255,7 +215,7 @@ kotlin {
                 if (successful) {
 
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine(
                             "git",
                             "checkout",
@@ -264,17 +224,17 @@ kotlin {
                     }
 
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine("git", "commit", "-a", "-m", "\"New release: ${libVersionName}\"").standardOutput
                     }
 
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine("git", "tag", libVersionName).standardOutput
                     }
 
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine("git", "push", "origin", "master", "--tags").standardOutput
                     }
                 }
@@ -290,8 +250,8 @@ kotlin {
 
             // Replace
             doLast {
-                val dir = File("$rootDir/../../hn-dto-cocoa/HNFoundation.podspec")
-                val tempFile = File("$rootDir/../../hn-dto-cocoa/HNFoundation.podspec.new")
+                val dir = File("$rootDir/../../hn-foundation-cocoa/HNFoundation.podspec")
+                val tempFile = File("$rootDir/../../hn-foundation-cocoa/HNFoundation.podspec.new")
 
                 val reader = dir.bufferedReader()
                 val writer = tempFile.bufferedWriter()
@@ -310,23 +270,21 @@ kotlin {
 
                 if (successful) {
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine("git", "commit", "-a", "-m", "\"New release: ${libVersionName}\"").standardOutput
                     }
 
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine("git", "tag", libVersionName).standardOutput
                     }
 
                     project.exec {
-                        workingDir = File("$rootDir/../../hn-dto-cocoa")
+                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
                         commandLine("git", "push", "origin", "master", "--tags").standardOutput
                     }
                 }
             }
         }
     }
-
-
 }

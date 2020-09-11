@@ -6,8 +6,11 @@ target 'HN Client' do
   use_frameworks!
 
   # Pods for HN Client
-  pod 'HNFoundation', :git => "git@github.com:prof18/hn-foundation-cocoa.git", :branch => 'develop'
-
+  # For develop releases:
+#  pod 'HNFoundation', :git => "git@github.com:prof18/hn-foundation-cocoa.git", :branch => 'develop'
+  # For stable releases
+  pod 'HNFoundation', :git => "git@github.com:prof18/hn-foundation-cocoa.git", :tag => '1.0.0'
+  
   pod 'Alamofire', '~> 5.2'
   
   #    pod 'HN_DTO', :git => "git@github.com:prof18/hn-dto-cocoa.git", :tag => '0.0.6'
