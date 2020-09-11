@@ -14,7 +14,7 @@ struct MainView: View {
     @State private var shouldAnimate = true
     
     init() {
-        viewModel.generateError()
+        viewModel.loadData()
     }
     
     var body: some View {

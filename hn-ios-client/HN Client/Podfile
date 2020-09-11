@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'HN Client' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for HN Client
+  pod 'HNFoundation', :git => "git@github.com:prof18/hn-foundation-cocoa.git", :branch => 'develop'
+
+  pod 'Alamofire', '~> 5.2'
+  
+  #    pod 'HN_DTO', :git => "git@github.com:prof18/hn-dto-cocoa.git", :tag => '0.0.6'
+
+
+end

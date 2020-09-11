@@ -18,7 +18,7 @@ struct NewsCard: View {
                     .font(.system(size: 18))
                 Spacer()
                     .frame(height: 9)
-                Text(self.news.getStringTime())
+                Text(self.news.formattedDate)
                     .font(.system(size: 14))
                     .italic()
             }
@@ -30,18 +30,17 @@ struct NewsCard: View {
         .cornerRadius(15)
         .shadow(color: Color.black.opacity(0.2), radius: 7, x: 0, y: 2)
         .onTapGesture {
-            if let newsUrl = self.news.url {
-                if let url = URL(string: newsUrl), !url.absoluteString.isEmpty {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
+            if let url = URL(string: self.news.url), !url.absoluteString.isEmpty {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                
             }
         }
     }
 }
 
 
-struct NewsCard_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsCard(news: newsList[1])
-    }
-}
+//struct NewsCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewsCard(news: newsList[1])
+//    }
+//}

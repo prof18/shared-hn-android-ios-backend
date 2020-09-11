@@ -6,7 +6,8 @@
 //  Copyright © 2020 Marco Gomiero. All rights reserved.
 //
 
-struct News {
+struct News: Hashable {
+    var id: Int64
     let title: String
     let formattedDate: String
     let url: String

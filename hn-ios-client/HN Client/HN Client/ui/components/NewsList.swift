@@ -29,8 +29,8 @@ struct NewsList: View {
     }
 }
 
-struct NewsList_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsList(newsList: newsList)
-    }
-}
+//struct NewsList_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewsList(newsList: newsList)
+//    }
+//}

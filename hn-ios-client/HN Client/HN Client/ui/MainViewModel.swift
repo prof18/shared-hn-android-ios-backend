@@ -7,32 +7,41 @@
 //
 
 import SwiftUI
+import Alamofire
+import HNFoundation
 
 class MainViewModel: ObservableObject {
     
     @Published private(set) var appState: AppState = AppState()
     
-    // TODO: add network calls
-    
     func loadData() {
         self.appState = AppState(newsState: Loading())
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.appState = AppState(newsState: Success(news: newsList))
-        }
-    }
-    
-    func generateError() {
-        self.appState = AppState(newsState: Loading())
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.appState = AppState(newsState: Error(reason: "This is a generated error only to try an error state"))
+        let request = AF.request("http://192.168.0.119:8080/hn/topStories")
+        
+        request.responseDecodable(of: NewsListDecodable.self, queue: DispatchQueue.main) { (response) in
+            guard let listResponse = response.value else {
+                print("something wrong")
+                self.appState = AppState(newsState: Error(reason: "Something wrong during the getting of the news"))
+                return
+                
+            }
+            
+            let news: [News] = listResponse.items.compactMap {
+                
+                let newsDTO = $0 as! NewsDTODecodable
+                
+                return News(id: newsDTO.id, title: newsDTO.title, formattedDate: self.getStringTime(time: newsDTO.timestamp), url: newsDTO.url)
+            }
+            
+            self.appState = AppState(newsState: Success(news: news))
         }
     }
     
-//    func getStringTime() -> String {
-//        let d = Date(timeIntervalSince1970: TimeInterval(time))
-//        let df = DateFormatter()
-//        df.dateFormat = "d MMM yyyy"
-//        return df.string(from: d)
-//    }
+    private func getStringTime(time: Int64) -> String {
+        let d = Date(timeIntervalSince1970: TimeInterval(time))
+        let df = DateFormatter()
+        df.dateFormat = "d MMM yyyy"
+        return df.string(from: d)
+    }
 }
