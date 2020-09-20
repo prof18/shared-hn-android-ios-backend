@@ -216,11 +216,7 @@ kotlin {
 
                     project.exec {
                         workingDir = File("$rootDir/../../hn-foundation-cocoa")
-                        commandLine(
-                            "git",
-                            "checkout",
-                            "master"
-                        ).standardOutput
+                        commandLine("git", "checkout", "master").standardOutput
                     }
 
                     project.exec {

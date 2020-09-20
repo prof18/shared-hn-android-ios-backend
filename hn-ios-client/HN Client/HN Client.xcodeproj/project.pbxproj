@@ -10,6 +10,7 @@
 		1D643EF22CAA5646832D62D2 /* Pods_HN_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06678894997AD9279C0D7C8D /* Pods_HN_Client.framework */; };
 		A94C23B9250B4F0F004B2DA4 /* NewDTODecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C23B8250B4F0F004B2DA4 /* NewDTODecodable.swift */; };
 		A94C23BB250B5116004B2DA4 /* NewListDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C23BA250B5116004B2DA4 /* NewListDecodable.swift */; };
+		A96C805C251783F100191FC7 /* HN_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C805B251783F100191FC7 /* HN_ClientTests.swift */; };
 		A96E58B725081F9B00794D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E58B625081F9B00794D63 /* AppDelegate.swift */; };
 		A96E58B925081F9B00794D63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E58B825081F9B00794D63 /* SceneDelegate.swift */; };
 		A96E58BD25081F9F00794D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96E58BC25081F9F00794D63 /* Assets.xcassets */; };
@@ -26,12 +27,25 @@
 		A96E58DF2508213100794D63 /* NewsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E58DE2508213100794D63 /* NewsState.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A96C805E251783F100191FC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96E58AB25081F9B00794D63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A96E58B225081F9B00794D63;
+			remoteInfo = "HN Client";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		06678894997AD9279C0D7C8D /* Pods_HN_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HN_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CD7175A6841B133E42966E /* Pods-HN Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HN Client.debug.xcconfig"; path = "Target Support Files/Pods-HN Client/Pods-HN Client.debug.xcconfig"; sourceTree = "<group>"; };
 		909DFCC5DA2E0178DBAB96BB /* Pods-HN Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HN Client.release.xcconfig"; path = "Target Support Files/Pods-HN Client/Pods-HN Client.release.xcconfig"; sourceTree = "<group>"; };
 		A94C23B8250B4F0F004B2DA4 /* NewDTODecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDTODecodable.swift; sourceTree = "<group>"; };
 		A94C23BA250B5116004B2DA4 /* NewListDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListDecodable.swift; sourceTree = "<group>"; };
+		A96C8059251783F100191FC7 /* HN ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HN ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96C805B251783F100191FC7 /* HN_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HN_ClientTests.swift; sourceTree = "<group>"; };
+		A96C805D251783F100191FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A96E58B325081F9B00794D63 /* HN Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HN Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96E58B625081F9B00794D63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96E58B825081F9B00794D63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A96C8056251783F100191FC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A96E58B025081F9B00794D63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,10 +92,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A96C805A251783F100191FC7 /* HN ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				A96C805B251783F100191FC7 /* HN_ClientTests.swift */,
+				A96C805D251783F100191FC7 /* Info.plist */,
+			);
+			path = "HN ClientTests";
+			sourceTree = "<group>";
+		};
 		A96E58AA25081F9B00794D63 = {
 			isa = PBXGroup;
 			children = (
 				A96E58B525081F9B00794D63 /* HN Client */,
+				A96C805A251783F100191FC7 /* HN ClientTests */,
 				A96E58B425081F9B00794D63 /* Products */,
 				0BA30B9894792C94A5649FDC /* Pods */,
 				C32D2DFE0894FB7B7E5F149C /* Frameworks */,
@@ -85,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A96E58B325081F9B00794D63 /* HN Client.app */,
+				A96C8059251783F100191FC7 /* HN ClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +196,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A96C8058251783F100191FC7 /* HN ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A96C8062251783F200191FC7 /* Build configuration list for PBXNativeTarget "HN ClientTests" */;
+			buildPhases = (
+				A96C8055251783F100191FC7 /* Sources */,
+				A96C8056251783F100191FC7 /* Frameworks */,
+				A96C8057251783F100191FC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A96C805F251783F100191FC7 /* PBXTargetDependency */,
+			);
+			name = "HN ClientTests";
+			productName = "HN ClientTests";
+			productReference = A96C8059251783F100191FC7 /* HN ClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A96E58B225081F9B00794D63 /* HN Client */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A96E58C725081F9F00794D63 /* Build configuration list for PBXNativeTarget "HN Client" */;
@@ -193,6 +243,10 @@
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "Marco Gomiero";
 				TargetAttributes = {
+					A96C8058251783F100191FC7 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = A96E58B225081F9B00794D63;
+					};
 					A96E58B225081F9B00794D63 = {
 						CreatedOnToolsVersion = 11.7;
 					};
@@ -212,11 +266,19 @@
 			projectRoot = "";
 			targets = (
 				A96E58B225081F9B00794D63 /* HN Client */,
+				A96C8058251783F100191FC7 /* HN ClientTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A96C8057251783F100191FC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A96E58B125081F9B00794D63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +334,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A96C8055251783F100191FC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96C805C251783F100191FC7 /* HN_ClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A96E58AF25081F9B00794D63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,6 +364,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A96C805F251783F100191FC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A96E58B225081F9B00794D63 /* HN Client */;
+			targetProxy = A96C805E251783F100191FC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A96E58C125081F9F00794D63 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -306,6 +384,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A96C8060251783F200191FC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2LS7B6UW98;
+				INFOPLIST_FILE = "HN ClientTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prof18.hn.ios.HN-ClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HN Client.app/HN Client";
+			};
+			name = Debug;
+		};
+		A96C8061251783F200191FC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2LS7B6UW98;
+				INFOPLIST_FILE = "HN ClientTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prof18.hn.ios.HN-ClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HN Client.app/HN Client";
+			};
+			name = Release;
+		};
 		A96E58C525081F9F00794D63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -467,6 +585,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A96C8062251783F200191FC7 /* Build configuration list for PBXNativeTarget "HN ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96C8060251783F200191FC7 /* Debug */,
+				A96C8061251783F200191FC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A96E58AE25081F9B00794D63 /* Build configuration list for PBXProject "HN Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -10,6 +10,11 @@ import HNFoundation
 
 class NewsDTODecodable: NewsDTO, Decodable {
     
+    // Used for testing
+    override init(author: String, id: Int64, score: Int32, timestamp: Int64, title: String, type: String, url: String) {
+        super.init(author: author, id: id, score: score, timestamp: timestamp, title: title, type: type, url: url)
+    }
+    
     enum CodingKeys: String, CodingKey {
         case author
         case id
