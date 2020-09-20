@@ -103,7 +103,7 @@ kotlin {
                 iosArm64().binaries.getFramework(libName, "Debug"),
                 iosX64().binaries.getFramework(libName, "Debug")
             )
-            destinationDir = buildDir.resolve("bin/universal/debug")
+            destinationDir = buildDir.resolve("$rootDir/../../hn-foundation-cocoa")
             group = libName
             description = "Create the debug framework for iOs"
             dependsOn("linkHNFoundationDebugFrameworkIosArm64")
@@ -133,7 +133,7 @@ kotlin {
             description = "Publish iOs framweork to the Cocoa Repo"
 
             // Create Release Framework for Xcode
-            dependsOn("universalFrameworkRelease")
+            dependsOn("universalFrameworkDebug")
 
             // Replace
             doLast {
