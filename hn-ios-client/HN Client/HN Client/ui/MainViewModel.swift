@@ -18,8 +18,7 @@ class MainViewModel: ObservableObject {
         self.appState = AppState(newsState: Loading())
         
         let request = AF.request("http://192.168.0.119:8080/hn/topStories")
-        
-        request.responseDecodable(of: NewsListDecodable.self, queue: DispatchQueue.main) { (response) in
+        request.responseDecodable(of: NewsListDecodable.self) { (response) in
             guard let listResponse = response.value else {
                 print("something wrong")
                 self.appState = AppState(newsState: Error(reason: "Something wrong during the getting of the news"))
