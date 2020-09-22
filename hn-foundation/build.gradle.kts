@@ -132,6 +132,11 @@ kotlin {
         register("publishDevFramework") {
             description = "Publish iOs framweork to the Cocoa Repo"
 
+            project.exec {
+                workingDir = File("$rootDir/../../hn-foundation-cocoa")
+                commandLine("git", "checkout", "develop").standardOutput
+            }
+
             // Create Release Framework for Xcode
             dependsOn("universalFrameworkDebug")
 
@@ -157,15 +162,6 @@ kotlin {
 
                 if (successful) {
 
-                    project.exec {
-                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
-                        commandLine(
-                            "git",
-                            "checkout",
-                            "develop"
-                        ).standardOutput
-                    }
-
                     val dateFormatter = SimpleDateFormat("dd/MM/yyyy - HH:mm", Locale.getDefault())
                     project.exec {
                         workingDir = File("$rootDir/../../hn-foundation-cocoa")
@@ -188,6 +184,11 @@ kotlin {
 
         register("publishFramework") {
             description = "Publish iOs framework to the Cocoa Repo"
+
+            project.exec {
+                workingDir = File("$rootDir/../../hn-foundation-cocoa")
+                commandLine("git", "checkout", "master").standardOutput
+            }
 
             // Create Release Framework for Xcode
             dependsOn("universalFrameworkRelease")
@@ -213,11 +214,6 @@ kotlin {
                 val successful = tempFile.renameTo(dir)
 
                 if (successful) {
-
-                    project.exec {
-                        workingDir = File("$rootDir/../../hn-foundation-cocoa")
-                        commandLine("git", "checkout", "master").standardOutput
-                    }
 
                     project.exec {
                         workingDir = File("$rootDir/../../hn-foundation-cocoa")
