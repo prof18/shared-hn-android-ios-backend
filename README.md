@@ -1,7 +1,10 @@
 # shared-hn-android-ios-backend
 A sample of Android app, iOs app, and backend that share some common code via Kotlin Multiplatform
 
-This is a sample project used in the talk "And that, folks, is how we shared code  between Android, iOS and the Backend" that shows the capabilities of Kotlin Multiplatform
+This is a sample project used in the talk ["And that, folks, is how we shared code  between Android, iOS and the Backend"](https://speakerdeck.com/prof18/and-that-folks-is-how-we-shared-code-between-android-ios-and-the-backend-droidcon-emea) that shows the capabilities of Kotlin Multiplatform.
+
+The branch [kotlin-serialization](https://github.com/prof18/shared-hn-android-ios-backend/tree/kotlin-serialization) uses Kotlin Serialization in all the platforms, like explained in ["Using Retrofit and Alamofire with Kotlin Serialization on Kotlin Multiplatform"](https://www.marcogomiero.com/posts/2020/kotlin-serialization-alamofire/)
+
 
 ## hn-foundation
 
