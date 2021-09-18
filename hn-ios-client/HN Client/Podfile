@@ -8,7 +8,7 @@ target 'HN Client' do
   # Pods for HN Client
   
   # For develop releases:
-  pod 'HNFoundation', :git => "git@github.com:prof18/hn-foundation-cocoa.git", :branch => 'develop'
+  # pod 'HNFoundation', :git => "git@github.com:prof18/hn-foundation-cocoa.git", :branch => 'develop'
   
   # For stable releases
   pod 'HNFoundation', :git => "git@github.com:prof18/hn-foundation-cocoa.git", :tag => '1.0.0'
