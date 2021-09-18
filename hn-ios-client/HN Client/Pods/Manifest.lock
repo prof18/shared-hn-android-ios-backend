@@ -1,10 +1,10 @@
 PODS:
-  - Alamofire (5.2.2)
-  - HNFoundation (1.0.0)
+  - Alamofire (5.4.3)
+  - HNFoundation (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
-  - "HNFoundation (from `git@github.com:prof18/hn-foundation-cocoa.git`, tag `1.0.0`)"
+  - "HNFoundation (from `git@github.com:prof18/hn-foundation-cocoa-xcframework.git`, tag `2.0.0`)"
 
 SPEC REPOS:
   trunk:
@@ -12,18 +12,18 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   HNFoundation:
-    :git: "git@github.com:prof18/hn-foundation-cocoa.git"
-    :tag: 1.0.0
+    :git: "git@github.com:prof18/hn-foundation-cocoa-xcframework.git"
+    :tag: 2.0.0
 
 CHECKOUT OPTIONS:
   HNFoundation:
-    :git: "git@github.com:prof18/hn-foundation-cocoa.git"
-    :tag: 1.0.0
+    :git: "git@github.com:prof18/hn-foundation-cocoa-xcframework.git"
+    :tag: 2.0.0
 
 SPEC CHECKSUMS:
-  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  HNFoundation: 0fb2b6144485508f6a698eb583ebfc60286052eb
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  HNFoundation: c299d34d38a14256b485f6b58ec13e959d5c15aa
 
-PODFILE CHECKSUM: 525ff151575ed5fedeafda322ca59e85ef700526
+PODFILE CHECKSUM: bd24eb8eb26a44a3229799e17b478572ae76286e
 
 COCOAPODS: 1.10.2

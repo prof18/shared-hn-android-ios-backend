@@ -1,30 +1,22 @@
 package com.prof18.hn.dto
 
-open class NewsDTO(
-    var author: String,
-    var id: Long,
-    var score: Int,
-    var timestamp: Long,
-    var title: String,
-    var type: String,
-    var url: String
-): BaseDTO() {
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.decodeFromString
 
-    constructor() : this(
-        author = "",
-        id = -1,
-        score = -1,
-        timestamp = -1,
-        title = "",
-        type = "",
-        url = ""
-    ) {
-        this.author = ""
-        this.id = -1
-        this.score = -1
-        this.timestamp = -1
-        this.title = ""
-        this.type = ""
-        this.url = ""
+@Serializable
+data class NewsDTO(
+    val author: String,
+    val id: Long,
+    val score: Int,
+    val timestamp: Long,
+    val title: String,
+    val type: String,
+    val url: String
+) : BaseDTO() {
+
+    override fun deserialize(jsonString: String): NewsDTO {
+        val newsDTO: NewsDTO = json.decodeFromString(jsonString)
+        newsDTO.makeFrozen()
+        return newsDTO
     }
 }

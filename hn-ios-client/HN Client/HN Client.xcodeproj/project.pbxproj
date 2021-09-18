@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D643EF22CAA5646832D62D2 /* Pods_HN_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06678894997AD9279C0D7C8D /* Pods_HN_Client.framework */; };
-		A94C23B9250B4F0F004B2DA4 /* NewDTODecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C23B8250B4F0F004B2DA4 /* NewDTODecodable.swift */; };
-		A94C23BB250B5116004B2DA4 /* NewListDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94C23BA250B5116004B2DA4 /* NewListDecodable.swift */; };
+		8DE88C6726F61A47008717C1 /* CustomSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE88C6626F61A47008717C1 /* CustomSerializer.swift */; };
 		A96C805C251783F100191FC7 /* HN_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C805B251783F100191FC7 /* HN_ClientTests.swift */; };
 		A96E58B725081F9B00794D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E58B625081F9B00794D63 /* AppDelegate.swift */; };
 		A96E58B925081F9B00794D63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E58B825081F9B00794D63 /* SceneDelegate.swift */; };
@@ -40,9 +39,8 @@
 /* Begin PBXFileReference section */
 		06678894997AD9279C0D7C8D /* Pods_HN_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HN_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CD7175A6841B133E42966E /* Pods-HN Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HN Client.debug.xcconfig"; path = "Target Support Files/Pods-HN Client/Pods-HN Client.debug.xcconfig"; sourceTree = "<group>"; };
+		8DE88C6626F61A47008717C1 /* CustomSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSerializer.swift; sourceTree = "<group>"; };
 		909DFCC5DA2E0178DBAB96BB /* Pods-HN Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HN Client.release.xcconfig"; path = "Target Support Files/Pods-HN Client/Pods-HN Client.release.xcconfig"; sourceTree = "<group>"; };
-		A94C23B8250B4F0F004B2DA4 /* NewDTODecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDTODecodable.swift; sourceTree = "<group>"; };
-		A94C23BA250B5116004B2DA4 /* NewListDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListDecodable.swift; sourceTree = "<group>"; };
 		A96C8059251783F100191FC7 /* HN ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HN ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96C805B251783F100191FC7 /* HN_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HN_ClientTests.swift; sourceTree = "<group>"; };
 		A96C805D251783F100191FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				A96E58D9250820CE00794D63 /* model */,
+				8DE88C6626F61A47008717C1 /* CustomSerializer.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -179,8 +178,6 @@
 				A96E58DA250820E100794D63 /* News.swift */,
 				A96E58DC2508212000794D63 /* AppState.swift */,
 				A96E58DE2508213100794D63 /* NewsState.swift */,
-				A94C23B8250B4F0F004B2DA4 /* NewDTODecodable.swift */,
-				A94C23BA250B5116004B2DA4 /* NewListDecodable.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -346,15 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE88C6726F61A47008717C1 /* CustomSerializer.swift in Sources */,
 				A96E58DF2508213100794D63 /* NewsState.swift in Sources */,
 				A96E58D22508204200794D63 /* NewsCard.swift in Sources */,
 				A96E58DD2508212000794D63 /* AppState.swift in Sources */,
 				A96E58D8250820B000794D63 /* MainView.swift in Sources */,
-				A94C23B9250B4F0F004B2DA4 /* NewDTODecodable.swift in Sources */,
 				A96E58D02508201000794D63 /* ErrorView.swift in Sources */,
 				A96E58DB250820E100794D63 /* News.swift in Sources */,
 				A96E58D42508205900794D63 /* NewsList.swift in Sources */,
-				A94C23BB250B5116004B2DA4 /* NewListDecodable.swift in Sources */,
 				A96E58B725081F9B00794D63 /* AppDelegate.swift in Sources */,
 				A96E58CE25081FFC00794D63 /* LoadingView.swift in Sources */,
 				A96E58B925081F9B00794D63 /* SceneDelegate.swift in Sources */,

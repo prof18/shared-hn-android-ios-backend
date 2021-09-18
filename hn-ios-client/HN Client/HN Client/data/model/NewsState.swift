@@ -10,15 +10,15 @@ import Foundation
 
 protocol NewsState {}
 
-struct Loading: NewsState {}
-struct Success: NewsState {
+struct LoadingState: NewsState {}
+struct SuccessState: NewsState {
     let news: [News]
     
     init(news: [News]) {
         self.news = news
     }
 }
-struct Error: NewsState {
+struct ErrorState: NewsState {
     let reason: String
     
     init(reason: String) {

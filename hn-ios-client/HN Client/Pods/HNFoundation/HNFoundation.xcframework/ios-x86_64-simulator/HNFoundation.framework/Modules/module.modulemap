@@ -1,0 +1,6 @@
+framework module HNFoundation {
+    umbrella header "HNFoundation.h"
+
+    export *
+    module * { export * }
+}

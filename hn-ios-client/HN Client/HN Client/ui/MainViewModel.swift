@@ -15,26 +15,21 @@ class MainViewModel: ObservableObject {
     @Published private(set) var appState: AppState = AppState()
     
     func loadData() {
-        self.appState = AppState(newsState: Loading())
+        self.appState = AppState(newsState: LoadingState())
         
-        let request = AF.request("http://192.168.0.119:8080/hn/topStories")
-        request.responseDecodable(of: NewsListDecodable.self) { (response) in
-            guard let listResponse = response.value else {
-                print("something wrong")
-                self.appState = AppState(newsState: Error(reason: "Something wrong during the getting of the news"))
-                return
-                
+        AF.request("http://192.168.0.147:8080/hn/topStories")
+            .response(responseSerializer: CustomSerializer<NewsListDTO>()) { response in
+                if let newsListDTO = response.value {
+                    DispatchQueue.main.async {
+                        let news: [News] = newsListDTO.news.compactMap {
+                            
+                            return News(id: $0.id, title: $0.title, formattedDate: self.getStringTime(time: $0.timestamp), url: $0.url)
+                        }
+                        
+                        self.appState = AppState(newsState: SuccessState(news: news))
+                    }
+                }
             }
-            
-            let news: [News] = listResponse.items.compactMap {
-                
-                let newsDTO = $0 as! NewsDTODecodable
-                
-                return News(id: newsDTO.id, title: newsDTO.title, formattedDate: self.getStringTime(time: newsDTO.timestamp), url: newsDTO.url)
-            }
-            
-            self.appState = AppState(newsState: Success(news: news))
-        }
     }
     
     private func getStringTime(time: Int64) -> String {

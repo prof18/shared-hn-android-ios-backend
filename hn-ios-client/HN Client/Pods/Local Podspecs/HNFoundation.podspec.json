@@ -1,22 +1,22 @@
 {
   "name": "HNFoundation",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "summary": "HNFoundation KMP library",
-  "homepage": "https://github.com/prof18/hn-foundation-cocoa",
-  "description": "The framework of the HNFoundation library",
-  "license": "UNLICENSED",
+  "homepage": "https://github.com/prof18/hn-foundation-cocoa-xcframework",
+  "license": "Apache",
   "authors": {
-    "Marco Gomiero": "mg@mail.it"
+    "Marco Gomiero": "mg@me.com"
   },
-  "platforms": {
-    "ios": "10.0"
-  },
-  "ios": {
-    "vendored_frameworks": "HNFoundation.framework"
-  },
+  "vendored_frameworks": "HNFoundation.xcframework",
   "source": {
-    "git": "git@github.com:prof18/hn-foundation-cocoa.git",
-    "tag": "1.0.0"
+    "git": "git@github.com:prof18/hn-foundation-cocoa-xcframework",
+    "tag": "2.0.0"
   },
-  "exclude_files": "Classes/Exclude"
+  "exclude_files": "Classes/Exclude",
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
 }
