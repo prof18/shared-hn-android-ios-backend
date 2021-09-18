@@ -1,0 +1,22 @@
+{
+  "name": "HNFoundation",
+  "version": "1.0.1",
+  "summary": "HNFoundation KMP library",
+  "homepage": "https://github.com/prof18/hn-foundation-cocoa",
+  "description": "The framework of the HNFoundation library",
+  "license": "UNLICENSED",
+  "authors": {
+    "Marco Gomiero": "mg@mail.it"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "ios": {
+    "vendored_frameworks": "HNFoundation.framework"
+  },
+  "source": {
+    "git": "git@github.com:prof18/hn-foundation-cocoa.git",
+    "tag": "1.0.1"
+  },
+  "exclude_files": "Classes/Exclude"
+}
