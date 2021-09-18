@@ -15,7 +15,5 @@ target 'HN Client' do
   
   pod 'Alamofire', '~> 5.2'
   
-  #    pod 'HN_DTO', :git => "git@github.com:prof18/hn-dto-cocoa.git", :tag => '0.0.6'
-
 
 end
