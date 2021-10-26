@@ -10,6 +10,7 @@ This sample project is used as reference during my talks, to show how to introdu
 
 - ["And that, folks, is how we shared code  between Android, iOS and the Backend - droidcon EMEA"](https://speakerdeck.com/prof18/and-that-folks-is-how-we-shared-code-between-android-ios-and-the-backend-droidcon-emea) -> [with-ios-fatframework](https://github.com/prof18/shared-hn-android-ios-backend/tree/with-ios-fatframework) branch
 - ["And that, folks, is how we shared code  between Android, iOS and the Backend - FOSDEM"](https://www.marcogomiero.com/talks/2021/shared-code-kmp-fosdem/) -> [with-ios-fatframework](https://github.com/prof18/shared-hn-android-ios-backend/tree/with-ios-fatframework) branch
+- ["Introducing Kotlin Multiplatform in an existing project"](https://www.marcogomiero.com/talks/2021/kmp-existing-project-droidcon-berlin.md/) -> main branch
 
 
 ## Repo Structure
